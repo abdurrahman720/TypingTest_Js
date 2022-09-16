@@ -107,17 +107,23 @@ const start = () => {
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = '<h1>${count}</h1>';
-
+    countdownOverlay.innerHTML = `<h1>${count}</h1>`;
+    // countdownOverlay.innerHTML = ``;
     // finished timer
+   
     if (count == 0) {
       // -------------- START TYPING -----------------
-      document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+
+      countdownOverlay.style.display = "none";
+      
       display.classList.remove("inactive");
 
-      clearInterval(startCountdown);
+      document.addEventListener("keydown", typeController);
+      
+      
+     clearInterval(startCountdown);
       startTime = new Date().getTime();
+      
     }
     count--;
   }, 1000);
@@ -125,6 +131,7 @@ const start = () => {
 
 // START Countdown
 startBtn.addEventListener('click', function () {
+ 
   start();
 });
 
