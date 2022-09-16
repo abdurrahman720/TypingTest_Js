@@ -24,17 +24,43 @@ function addHistory(questionText, timeTaken, errorCount) {
 function displayHistory() {
   histories.innerHTML = "";
   const previousTests = JSON.parse(localStorage.getItem("testHistory")) || [];
+  const sliced = Object.fromEntries(
+    Object.entries(previousTests).slice(Object.keys(previousTests).length-3,Object.keys(previousTests).length)
+) ;
 
-  previousTests.forEach((test) => {
-    const newRow = document.createElement("div");
-    newRow.classList.add("card");
+  // if (Object.keys(previousTests).length > 3) {
+    
+  //   sliced.forEach((slice) => {
 
-    newRow.innerHTML = `
-  <h3>${test.questionText}</h3>
-  <p>You took: <span class="bold">${test.timeTaken}</span> seconds</p>
-    <p>You made <span class="bold red">${test.errorCount}</span> mistakes</p>
-  `;
+  //     const newRow = document.createElement("div");
+  //     newRow.classList.add("card");
+  
+  //     newRow.innerHTML = `
+  //   <h3>${slice.questionText}</h3>
+  //   <p>You took: <span class="bold">${slice.timeTaken}</span> seconds</p>
+  //     <p>You made <span class="bold red">${slice.errorCount}</span> mistakes</p>
+  //   `;
+  
+  //     histories.appendChild(newRow);
+  //   });
+  // }
 
-    histories.appendChild(newRow);
-  });
+  // else {
+    
+    previousTests.forEach((test) => {
+
+      const newRow = document.createElement("div");
+      newRow.classList.add("card");
+  
+      newRow.innerHTML = `
+    <h3>${test.questionText}</h3>
+    <p>You took: <span class="bold">${test.timeTaken}</span> seconds</p>
+      <p>You made <span class="bold red">${test.errorCount}</span> mistakes</p>
+    `;
+  
+      histories.appendChild(newRow);
+    });
+  
+  
+
 }
