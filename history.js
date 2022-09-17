@@ -28,24 +28,7 @@ function displayHistory() {
     Object.entries(previousTests).slice(Object.keys(previousTests).length - 3, Object.keys(previousTests).length)
   );
 
-  // if (Object.keys(previousTests).length > 3) {
-    
-  //   const slicedArr = Object.entries(sliced)
-  //   console.log(slicedArr)
-  //   slicedArr.forEach((slice) => {
-
-  //     const newRow = document.createElement("div");
-  //     newRow.classList.add("card");
   
-  //     newRow.innerHTML = `
-  //   <h3>${slice.questionText}</h3>
-  //   <p>You took: <span class="bold">${slice.timeTaken}</span> seconds</p>
-  //     <p>You made <span class="bold red">${slice.errorCount}</span> mistakes</p>
-  //   `;
-  
-  //     histories.appendChild(newRow);
-  //   });
-  // }
 
   // else {
     
