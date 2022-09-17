@@ -195,7 +195,7 @@ button {
   }
 
   #histories{
-    display: flex;
+    display: flex; /* for mobile devices, all the cards should be column wise */
     
     flex-direction: column;
   }
