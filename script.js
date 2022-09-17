@@ -123,7 +123,7 @@ const start = () => {
       
       
      clearInterval(startCountdown);
-      startTime = new Date().getSeconds();
+      startTime = new Date().getSeconds(); //used getSeconds method instead of get time
       
     }
     count--;
