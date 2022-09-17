@@ -108,7 +108,7 @@ const start = () => {
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = `<h1>${count}</h1>`;
+    countdownOverlay.innerHTML = `<h1>${count}</h1>`;  //used `` in this dynamic string
     // countdownOverlay.innerHTML = ``;
     // finished timer
    
@@ -131,7 +131,7 @@ const start = () => {
 };
 
 // START Countdown
-startBtn.addEventListener('click', function () {
+startBtn.addEventListener('click', function () {                /* 1. corrected start id name */
  
   start();
 });
