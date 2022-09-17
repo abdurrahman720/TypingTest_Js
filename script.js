@@ -115,7 +115,7 @@ const start = () => {
     if (count == 0) {
       // -------------- START TYPING -----------------
 
-      countdownOverlay.style.display = "none";
+      countdownOverlay.style.display = "none"; //countdownOverlay display should be none from flex after 3 countdown
       
       display.classList.remove("inactive");
 
