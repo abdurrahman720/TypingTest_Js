@@ -63,7 +63,7 @@ body {
 }
 #result {
   position: fixed;
-  top: 50%; 
+  top: 50%; /* top and left is set 50% to show result card in center */
   left: 50%;
   transform: translate(-50%, -50%);
   height: 250px;
