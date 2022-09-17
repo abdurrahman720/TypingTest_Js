@@ -68,7 +68,7 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getSeconds();
-  const timeTaken = (finishTime - startTime);
+  const timeTaken = (finishTime - startTime); //removed 1000 divider
 
   // show result modal
   resultModal.innerHTML = "";

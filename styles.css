@@ -142,7 +142,7 @@ button {
 }
 
 #histories {
-  display: grid;
+  display: grid; /* used grid to display 3 card in one row */
   grid-template-columns: auto auto auto;
   justify-content: space-around;
   column-gap: 50px;
@@ -155,7 +155,7 @@ button {
   height: 100%;
   padding: 50px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* direction is column so that texts appear clearly */
   justify-content: space-evenly;
   align-items: center;
   padding: 20px 30px;
