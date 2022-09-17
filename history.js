@@ -25,12 +25,14 @@ function displayHistory() {
   histories.innerHTML = "";
   const previousTests = JSON.parse(localStorage.getItem("testHistory")) || [];
   const sliced = Object.fromEntries(
-    Object.entries(previousTests).slice(Object.keys(previousTests).length-3,Object.keys(previousTests).length)
-) ;
+    Object.entries(previousTests).slice(Object.keys(previousTests).length - 3, Object.keys(previousTests).length)
+  );
 
   // if (Object.keys(previousTests).length > 3) {
     
-  //   sliced.forEach((slice) => {
+  //   const slicedArr = Object.entries(sliced)
+  //   console.log(slicedArr)
+  //   slicedArr.forEach((slice) => {
 
   //     const newRow = document.createElement("div");
   //     newRow.classList.add("card");
@@ -47,6 +49,7 @@ function displayHistory() {
 
   // else {
     
+    console.log(previousTests)
     previousTests.forEach((test) => {
 
       const newRow = document.createElement("div");
@@ -61,6 +64,5 @@ function displayHistory() {
       histories.appendChild(newRow);
     });
   
-  
+  }
 
-}
